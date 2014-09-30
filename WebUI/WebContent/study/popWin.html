@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery.popWin.js </title>
+<meta name="keywords"  content="javascript右下角通知框，jquery弹窗插件，可自定的通知弹窗插件" />
+<meta name="description"  content="我的原创广告弹窗通知插件，很简单，代码通俗易懂，方便您的学习和二次开发" />
+<script language="javascript" type="text/javascript" src="../js/jquery-1.9.1.js"></script>
+<script language="javascript" type="text/javascript" src="../js/jquery.popWin.js"></script>
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="../css/popWin.css" />
+<style type="text/css">
+/*初始化
+www.uinote.cn
+*/
+body{}
+.clearfix:after{content:"."; display:block; clear:both; line-height:0; font-size:0; height:0; overflow:hidden; visibility:hidden;}
+.clearfix{*zoom:1;}
+.clear{display:block; height:0; font-size:0; line-height:0; visibility:hidden; overflow:hidden; clear:both;}
+p,ul,li,body,h1,h2,h3,h4,h5,h6,dl,dd,form,input,li,dd{margin:0; padding:0;}
+body{font-size:12px; color:#333; font-family:/*Arial,*/"宋体";}
+h2,h3,h4,h5,h6{font-size:14px;}
+img{border:none}
+a,a:link{color:#333; text-decoration:none;}
+a:hover{color:#5959FF; text-decoration:underline;}
+/*初始化结束
+www.uinote.cn
+*/
+.main{margin:15px 50px;}
+h1{text-align:center; font-family:微软雅黑; font-weight:normal; padding-bottom:25px;}
+#content{line-height:19px;}
+.sp999{color:#999;}
+h2{height:21px; line-height:21px; padding-left:6px; background-color:#e0e0e0;}
+
+/*简易demo*/
+.demo{width:240px; height:150px;border:1px #e0e0e0 solid; position:fixed; right:2px; bottom:2px; background-color:white;}
+.demo .title{height:23px; line-height:23px; background-color:#f8f8f8; font-size:14px; font-family:宋体;padding-left:5px; border-bottom:1px #e0e0e0 solid;}
+.demo .title .close{float:right; padding-right:4px; color:red; cursor:pointer;}
+.demo .title .close:hover{color:purple;}
+.demoContent{font-size:12px; line-height:19px; padding:5px;}
+.demoContent p{text-indent:2em;}
+
+
+</style>
+
+<script language="javascript" type="text/javascript">
+$.fn.popWin({
+	PopSelector:".demo",  //弹出的窗体
+	CloseSelector:".demo .close",  //关闭窗体的触发开关
+	lideTime:600  //窗体出场入场动画的时间
+	})
+document.getElementById("demo1").onclick=function(){
+	$.fn.popWin({
+		PopSelector:"#my-demo",
+		CloseSelector:"#my-demo .close",
+		slideTime:200
+	})
+};
+</script>
+</head>
+<body>
+<div class="main"></div>
+<div class="demo" style="display:none">
+	<div class="title"><span class="close" title="关闭">&times;</span><strong>我的弹窗通知</strong></div>
+    <div class="demoContent">
+    	<p>最新研发jquery右下角弹出广告插件，可作为通知框。。。最新研发jquery右下角弹出广告插件，可作为通知框。。。        </p>
+    	<p>兼容平台:ie6/7/8/9 ff chrome opera safari.简单实用可扩展性强。方便二次开发。 </p>
+    </div>
+</div>
+
+<div id="content" class="main" style="padding:20px; font-size:14px; border:5px #F5F5F5 solid; width:960px;">
+
+  <h2>我的美化示例</h2>
+  
+  <div class="addWin"  id="my-demo" style="display:none">
+	<div class="title">
+    	<span class="close" onmouseover="this.className='close closeHover'" onmouseout="this.className='close'"></span>
+    	<h3>窗口标题</h3>
+    </div>
+	<div style="padding:6px;">
+    	<p>美化示例美化示例美化示例美化示例美化示例美化示例</p>
+    	<p>美化示例美化示例美化示例美化示例美化示例美化示例美化示例美化示例美化示例美化示例美化示例美化示例美化示例美化示例美化示例美化示例美化示例 </p>
+	</div>
+</div>
+<p>&nbsp;</p>
+<p>
+  <input type="button" id="demo1" value="查看美化示例" />
+</p>
+
+
+<!--www.uinote.c-n-->
+<!--www.uinote.c-n-->
+</body>
+</html>
